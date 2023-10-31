@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<div lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Alumni</title>
+   <link rel="shortcut icon" href="img/Cloud%20Summit%20(5).png">
+   <link rel="shortcut icon" href="img/Cloud%20Summit%20(5).png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Css -->
+   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+   <link href="css/base.css" rel="stylesheet" type="text/css" media="all"/>
+   <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+   <link href="css/flexslider.css" rel="stylesheet" type="text/css"  media="all" />
+   <link href="css/venobox.css" rel="stylesheet" type="text/css"  media="all" />
+   <link href="css/fonts.css" rel="stylesheet" type="text/css"  media="all" />
+   <link href="css/ca.css" rel="stylesheet" type="text/css"  media="all" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   
+
+   <link rel="stylesheet" href="css/alumni.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+   <link rel="stylesheet" href="./fonts/CircularStdBold/font.css">
+   <link rel="shortcut icon" href="./JCS%20Logo%20White.png">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+
+      <script>
+       
+         function Redirect() {
+                 window.location = "index.html";
+              }  
+        function SubForm (){
+           $.ajax({
+              url:"https://api.apispreadsheets.com/data/1jQjLEzQT1xjMsGy/",
+              type:"post",
+              data:$("#myForm").serializeArray(),
+              success:function() {
+          $('#registration_form').html("<div id='message'></div>");
+          $('#message').html("<h2>Registration Form is Submitted!</h2>")
+          .append("<p>We will be in touch soon.</p>")
+          .hide()
+          .fadeIn(1500, function() {
+            $('#message').append("You will be redirected to main page in 5 sec.");
+            setTimeout('Redirect()', 5000);
+          }
+          );
+        },
+              error: function(){
+                 alert("There was an error :(")
+              }
+           });
+        }
+     </script>
+</head>
+
+<body>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top main-nav c25" id="mainNav">
+   <div class="container-fluid" style="padding-right:0; padding-left:0;">
+      <a class="navbar-brand js-scroll-trigger navbar-title" href="index.html"><img
+            src="img/logo/JCS%20Logo%20White.png" class="navbar-img ca-img"></a>
+      <a class="navbar-brand js-scroll-trigger " href="index.html">
+      </a>
+      <g id="XMLID_50_">
+
+      </g>
+
+   </div>
+</nav> -->
+<!--Header-->
+<header class="header">
+   <!--Container-->
+   <div class="container ">
+      <!--Row-->
+      <div class="row">
+         <div class="col-md-2">
+            <a class="scroll logo" href="index.html">
+               <h2><img src="img/logo/JCS%20Logo%20White.png" ></h2>
+            </a>
+         </div>
+         <div class="col-md-10 text-right">
+            <nav class="main-nav">
+               <div class="toggle-mobile-but">
+                  <a href="#" class="mobile-but" >
+                     <div class="lines"></div>
+                  </a>
+               </div>
+               <ul>
+                  <li><a class="scroll" href="index.html">Home</a></li>
+                  <li><a class="scroll" href="team.html">Team</a></li>                  
+               </ul>
+            </nav>
+         </div>
+      </div>
+      <!--End row-->
+   </div>
+   <!--End container-->
+</header>
+
+<br><br><br><br>
+
+<center><h1 class="main-heading"><img src="Alumni/alumni.png" ></h1></center>
+
+
+<div class="conta">
+  <div class="box2">
+    <center></center>
+  </div>
+  <div class="box1">
+    <br />
+    <center>
+      
+      Are you an alumni of JECRC Foundation?<br><br>
+      We hold a special place for our alumni in both our hearts and the JECRC Cloud Summit'22. So if you do belong to the alums of our institution, refer the link mentioned ahead to fill out the form and get a chance to participate in the student driven offline cloud summit which is first in the nation and in the state of Rajasthan.
+    </p>
+  </div>
+</div>
+<br><br><br>
+<div class="form container w-75 mt-5" id="registration_form">
+  
+
+  <form id="myForm">
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name:</label>
+          <input type="name"  class="form-control" name="Name" required="true" />
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address:</label
+          >
+
+
+          <input
+            type="email"
+            name="Email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+
+            
+       required/>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Contact Number:</label
+          >
+          <input type="tel" class="form-control" name="Telephone" id="exampleInputPassword1" required/>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Linkedin profile:</label
+          >
+          <input type="name" name="Linkdin" class="form-control" id="exampleInputPassword1" aria-required="true" />
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Company Name:</label
+        >
+        <input type="Text" name="Company_Name" class="form-control" id="exampleInputPassword1" required="true" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Designation</label
+      >
+      <input type="text" name="Designation" class="form-control" id="exampleInputPassword1" required="true" />
+  </div>
+    
+    </form>
+    <center><button onclick='SubForm()' type="submit" class="btn btn-primary mt-4">Submit</button></center>
+</div>
+<br><br>
+<div class="bottom-footer bg-black pt-50 pb-50">
+    <!--Container-->
+    <div class="container ">
+       <div class="row">
+          <div class="col-md-6">
+             <center><p>	Made with &hearts; by Team CLOUD SUMMIT </p></center>
+        
+          </div>
+          <div class="col-md-6 ">
+            <ul class="block-legal">
+
+                   <li><a class="scroll" href="#about">About</a></li>
+                   <li><a class="scroll" href="#speakers">Speakers</a></li>
+
+                   <li><a class="scroll" href="#schedule">Timeline</a></li>
+                
+             <li><a class="scroll" href="#sponsor">Sponsors</a></li>
+
+             <li><a class="scroll" href="team.html">Team</a></li>
+                   
+                
+       
+
+                <li><a class="gradient-text scroll" href="#top">Back To Top</a></li>
+             </ul>
+          </div>
+       </div>
+    </div>
+    <!--End container-->
+ <img src="img/cloud%20footer.gif" class="bottom">
+ </div>
+</footer>
+</div>
+</body>
+</html>

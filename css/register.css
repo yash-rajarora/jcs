@@ -1,0 +1,64 @@
+body{
+    /* background: linear-gradient(45deg, #7373eb, #ff6565); */
+    /* color: rgb(53, 9, 9); */
+	font-family: 'Poppins', sans-serif;
+    background: #07071c;
+    color: white;
+
+
+}
+
+  input[type="tel"],
+  .registry-form .block-select {
+      background: rgba(7, 7, 28, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 25px;
+      outline: 0 none;
+      overflow: hidden;
+      padding: 0 25px;
+      resize: none;
+      max-width: 90%;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: : 25px;
+      color: #ffffff;
+      height: 45px;
+  }
+  input[type="email"],
+.registry-form .block-select {
+    background: rgba(7, 7, 28, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    outline: 0 none;
+    overflow: hidden;
+    padding: 0 25px;
+    resize: none;
+    max-width: 90%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: : 25px;
+    color: #ffffff;
+    height: 45px;
+}
+input[type="name"],
+.registry-form .block-select {
+    background: rgba(7, 7, 28, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
+    outline: 0 none;
+    overflow: hidden;
+    padding: 0 25px;
+    resize: none;
+    max-width: 90%;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: : 25px;
+    color: #ffffff;
+    height: 45px;
+}

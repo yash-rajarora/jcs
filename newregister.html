@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Yourself</title>
+    <link rel="stylesheet" href="newregister.css">
+
+    <script>
+
+        function Redirect() {
+          window.location = "index.html";
+        }
+        function SubForm() {
+    
+          $.ajax({
+            url: "https://api.apispreadsheets.com/data/yFhCdVm4mq2di6zj/",
+            type: "post",
+            data: $("#myForm").serializeArray(),
+            success: function () {
+              alert('your form is filled')
+              $('#registration_form').html("<div id='message'></div>");
+              $('#message').html("<h2>Thankyou for Subscribing</h2>")
+    
+                .append("<p>We will update you about everything through mail</p>")
+    
+                .append("<p>We will give you all updates regarding Cloud summit through mail</p>")
+    
+                .hide()
+                .fadeIn(1500, function () {
+                  $('#message').append("You will be redirected to main page in 5 sec.");
+                  setTimeout('Redirect()', 2000);
+                }
+                );
+            },
+            error: function () {
+              alert("There was an error :(")
+            }
+          });
+        }
+      </script>
+</head>
+<body>
+    <div class="event" id="registration_form">
+        <div class="container">
+          <p class="event-date">
+            23 - 25 September , 2022
+          </p>
+          <h1 class="event-title">
+            RAJASTHAN'S FIRST EVER CLOUD SUMMIT - "JECRC CLOUD SUMMIT"
+          </h1>
+          <p class="event-info">
+            JECRC Cloud Summit is an event organized by JECRC Foundation to promote and acknowledge the importance of cloud computing.
+          </p>
+      
+          <form action="" id="myForm" class="reg-form">
+            <h2 class="form-heading">
+              Join the event
+            </h2>
+            <!--     first name & last name -->
+            <div class="row">
+              <!--       First name -->
+              <div class="col">
+                <label for="">
+                  First name
+                </label>
+                <input type="text" name="firstname" id="" placeholder="Enter your first name" required>
+              </div>
+              <!--       Last name -->
+              <div class="col">
+                <label for="">
+                  Last name
+                </label>
+                <input type="text" name="lastname" id="" placeholder="Enter your last name">
+              </div>
+            </div>
+            <!--     email & job -->
+            <div class="row">
+              <!--       Business email -->
+              <div class="col">
+                <label for="">
+                Email Id:
+                </label>
+                <input type="email" name="email" id="" placeholder="Enter your email">
+              </div>
+              <!--       title -->
+              <div class="col">
+                <label for="">
+                  Contact Number
+                </label>
+                <input type="tel" name="telephone" id="" placeholder="Your Contact Info">
+              </div>
+            </div>
+            <div class="row">
+                <!--       Business email -->
+                <div class="col">
+                  <label for="">
+                  College/Organization
+                  </label>
+                  <input type="email" name="college" id="" placeholder="Enter your College name">
+                </div>
+                <!--       title -->
+                <div class="col">
+                  <label for="">
+                    City
+                  </label>
+                  <input type="text" name="city" id="" placeholder="Enter City">
+                </div>
+              </div>
+            <!--     company -->
+            <div class="row">
+              <!--       company name -->
+              <div class="col">
+                <label for="">
+                  Address
+                </label>
+                <input type="text" name="address" id="" placeholder="Where do you live?">
+              </div>
+              <!--       company size -->
+              <div class="col">
+                <label for="">
+                  Country
+                </label>
+                <select name="" id="">
+                  <option value="" disabled selected>Select</option>
+                  <option value="">Upto 5</option>
+                  <option value="">Upto 50</option>
+                  <option value="">Upto 100</option>
+                  <option value="">Upto 500</option>
+                </select>
+              </div>
+            </div>
+      
+            <div class="textarea">
+              <label for="">What are you hoping to learn about?</label>
+              <textarea name="" id="" placeholder="Where do you work?"></textarea>
+            </div>
+      
+            <div class="checkbox">
+              <input type="checkbox" name="views" id="">
+              <label for="">I would like to recieve emails about future webinars</label>
+            </div>
+      
+           
+          </form>
+
+          <button onclick='SubForm()' type="submit" >
+            Register for this event
+          </button>
+        </div>
+      </div>
+      
+      <div class="sidebar">
+        <div class="share">
+          <h4 class="heading">SHARE</h4>
+          <div class="social">
+            <a href="">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </div>
+        </div>
+      
+        <div class="guests">
+          <h4 class="heading">GUESTS</h4>
+          <div class="people">
+            <!-- <img src="../JECRC-Cloud-Summit.github.io/img/avijit_speaker.web" alt="" class="people-image"> -->
+            <div class="people-info">
+              <h5 class="people-name">Sandeep Jain</h5>
+              <p class="designation">Founder and CEO , Geeks for Geeks</p>
+            </div>
+          </div>
+      
+        
+        </div>
+      
+       
+      </div>
+      
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
